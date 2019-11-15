@@ -1,0 +1,54 @@
+<ion-header>
+    <ion-toolbar color="dark">
+        <ion-title *ngFor="let name of dish" >{{name.nom}}</ion-title>
+      <ion-buttons slot="end">
+        <ion-button size="small" shape="round" (click)="closeModal()" color="light">
+          <ion-icon slot="icon-only" name="close-circle"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+    </ion-toolbar>
+  </ion-header>
+
+<ion-content color="white" padding>
+
+  <ion-grid no-padding>
+    <ion-row margin-bottom *ngFor="let dishSupplement of dishSupplements" >
+      <ion-col>
+        <ion-text color="warning-contrast">{{ dishSupplement.nom }}</ion-text>
+        <p ion-text color="light">Votre choix:</p>
+            <ion-item lines="none" *ngFor="let option of dishSupplement.options; let i = index">
+                <ion-checkbox slot="start" ></ion-checkbox>
+                <!-- [(ngModel)]="options[i].isChecked" -->
+                <ion-label ion-text>
+                    {{ option.libelle }}
+                </ion-label>
+                <ion-label slot="end">
+                  <ion-text> {{ option.prix }} F CFA</ion-text>
+                </ion-label>
+              </ion-item>
+        </ion-col>
+    </ion-row>
+  </ion-grid>
+
+</ion-content>
+
+<ion-footer translucent no-padding no-margin >
+    <ion-row no-padding-vertical no-padding no-margin>
+        <ion-col  size="6">
+            <div class="left">
+                <ion-item lines="none" size-sm="12">
+                    <ion-icon slot="start" name="remove"  tappable (click)="minusQtd()" [hidden]="qtd < 2" color="dark"></ion-icon>
+                    <div slot="start" color="warning-contrast"  ion-text>{{ qtd }}</div>
+                    <ion-icon slot="start" name="add"  tappable (click)="plusQtd()" color="dark"></ion-icon>
+                </ion-item>
+            </div>
+        </ion-col>
+        <ion-col size="6">
+            <div class="right">
+              <ion-button class="font" color="dark" (click)="addcart()">
+                  <ion-text color="light">Ajouter au panier</ion-text>
+              </ion-button>
+            </div>
+        </ion-col>
+      </ion-row>
+  </ion-footer>

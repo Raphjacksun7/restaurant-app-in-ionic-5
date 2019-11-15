@@ -1,0 +1,10 @@
+{
+  "/api/*": {
+    "target" :"https://beninrestoo.com",
+    "secure" : false,
+    "logLevel": "debug",
+    "changeOrigin" : true
+  }
+}
+
+

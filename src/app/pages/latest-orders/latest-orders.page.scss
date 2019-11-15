@@ -1,0 +1,11 @@
+:host {
+    ion-content {
+      --background: var(--ion-color-light);
+    }
+
+    ion-card {
+        &.no-radius {
+            border-radius: 0;
+        }
+    }
+}

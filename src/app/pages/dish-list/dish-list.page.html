@@ -1,0 +1,31 @@
+<ion-header>
+    <ion-toolbar color="primary">
+      <ion-buttons slot="start">
+        <ion-back-button></ion-back-button>
+      </ion-buttons>
+      <ion-title>
+        {{ 'app.pages.dishlist.title.header' | translate }}
+      </ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+<ion-content>
+    <ion-list no-margin [@staggerIn]="dishes">
+      <ion-item no-padding lines="none" *ngFor="let dish of dishes" tappable routerLink="/dish-detail/{{dish.id}}">
+        <ion-thumbnail margin slot="start">
+            <img [src]="dish.picture">
+          </ion-thumbnail>
+        <ion-label>
+          <h2 class="fw700 text08">
+            <ion-text color="dark">{{dish.name}}</ion-text>
+          </h2>
+          <p>
+            <ion-text color="primary">{{ dish.ingredients }}</ion-text>
+          </p>
+        </ion-label>
+        <ion-badge color="success">
+          <ion-text color="light">{{ dish.price | currency }}</ion-text>
+        </ion-badge>
+      </ion-item>
+    </ion-list>
+</ion-content>

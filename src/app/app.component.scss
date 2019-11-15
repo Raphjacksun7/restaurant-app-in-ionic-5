@@ -1,0 +1,23 @@
+:host {
+    ion-content {
+        background: #fabd10;
+    }
+
+    ion-list {
+        &.list-md {
+            padding: 0;
+        }
+    }
+
+    ion-menu-toggle {
+        background: #ffffff !important;
+        padding-left: 5px;
+        padding-right: 5px;
+        border-radius: 3px;
+        
+    }
+
+    .list-ios {
+        background: #ffffff !important;
+    }
+}

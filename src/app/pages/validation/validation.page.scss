@@ -1,0 +1,30 @@
+:host {
+    ion-content {
+        --background: #fff;
+    }
+
+    ion-item {
+        border-radius: 0;
+        border-bottom: 1px dotted var(--ion-color-medium);
+    }
+    
+
+}
+
+.policeAndColor {
+    color: #747d70;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.policeAndColor2 {
+    color: #747d70;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 12px;
+}
+.bottoms {
+    margin-bottom: -25px;
+}
+.policeAndColorAndAlert {
+    color: #198400;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+}

@@ -1,0 +1,61 @@
+<ion-header>
+  <ion-toolbar color="dark">
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Vos commandes</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <!-- <ion-card *ngIf="!lastOrders.length" color="primary" margin-top>
+    <ion-card-content>
+      <p text-center class="text-white">{{ 'app.pages.latestorders.label.error' | translate }}</p>
+    </ion-card-content>
+  </ion-card>
+
+  <div>
+    <ion-card class="bg-white" *ngFor="let order of lastOrders">
+      <ion-card-header text-center color="dark">
+        <h3 class="text12 fw300" no-margin>
+          <ion-text color="light">Order number: <span class="fw700">#{{ order.onumber }}</span></ion-text>
+        </h3>
+      </ion-card-header>
+      <ion-card-content>
+
+        <ion-list *ngFor="let item of order.order" no-margin margin-bottom>
+          <ion-item no-margin no-padding>
+            <ion-thumbnail slot="start">
+                <img [src]="item.order.picture"/>
+            </ion-thumbnail>
+            <ion-label>
+              <h2 class="fw700">
+                <ion-text color="dark">{{item.order.name}}</ion-text>
+              </h2>
+              <p>
+                <ion-text color="primary">Quantity: <span class="fw700">{{item.qtd}}</span></ion-text>
+              </p>
+            </ion-label>
+
+            <ion-badge color="primary">{{ item.order.price * item.qtd | currency }}</ion-badge>
+          </ion-item>
+        </ion-list>
+
+        <ion-grid no-padding margin-top>
+          <ion-row>
+            <ion-col no-padding>
+              <ion-card color="success" no-margin text-center>
+                <ion-card-content no-paddin>
+                  <span ion-text class="text-white">Total</span>
+                  <h2 ion-text no-margin class="fw700 text-white">{{ order.total | currency }}</h2>
+                </ion-card-content>
+              </ion-card>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </ion-card-content>
+    </ion-card>    
+  </div> -->
+
+</ion-content>

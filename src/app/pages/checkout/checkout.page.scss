@@ -1,0 +1,27 @@
+:host {
+    ion-content {
+        --background: #fff;
+    }
+
+    ion-item {
+        border-radius: 0;
+        border-bottom: 1px dotted var(--ion-color-medium);
+    }
+
+    ion-card {
+        &.no-radius {
+            border-radius: 0;
+        }
+    }
+}
+
+.ccFlags {
+    img {
+      max-width: 100%;
+      
+    }
+  }
+  
+  ion-select {
+      max-width: 100%;
+  }

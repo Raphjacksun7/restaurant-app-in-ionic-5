@@ -1,0 +1,278 @@
+-- Merging decision tree log ---
+provider#android.support.v4.content.FileProvider
+INJECTED from /home/raph/Documents/BeninRestoo/foodionic2-single-20190817/android/app/src/main/AndroidManifest.xml:34:9-42:20
+	android:grantUriPermissions
+		ADDED from /home/raph/Documents/BeninRestoo/foodionic2-single-20190817/android/app/src/main/AndroidManifest.xml:38:13-47
+	android:authorities
+		INJECTED from /home/raph/Documents/BeninRestoo/foodionic2-single-20190817/android/app/src/main/AndroidManifest.xml
+		ADDED from /home/raph/Documents/BeninRestoo/foodionic2-single-20190817/android/app/src/main/AndroidManifest.xml:36:13-64
+	android:exported
+		ADDED from /home/raph/Documents/BeninRestoo/foodionic2-single-20190817/android/app/src/main/AndroidManifest.xml:37:13-37
+	android:name
+		ADDED from /home/raph/Documents/BeninRestoo/foodionic2-single-20190817/android/app/src/main/AndroidManifest.xml:35:13-67
+manifest
+ADDED from /home/raph/Documents/BeninRestoo/foodionic2-single-20190817/android/app/src/main/AndroidManifest.xml:2:1-63:12
+INJECTED from /home/raph/Documents/BeninRestoo/foodionic2-single-20190817/android/app/src/main/AndroidManifest.xml:2:1-63:12
+INJECTED from /home/raph/Documents/BeninRestoo/foodionic2-single-20190817/android/app/src/main/AndroidManifest.xml:2:1-63:12
+INJECTED from /home/raph/Documents/BeninRestoo/foodionic2-single-20190817/android/app/src/main/AndroidManifest.xml:2:1-63:12
+MERGED from [:capacitor-android] /home/raph/Documents/BeninRestoo/foodionic2-single-20190817/node_modules/@capacitor/android/capacitor/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-15:12
+MERGED from [com.android.support:design:28.0.0] /home/raph/.gradle/caches/transforms-1/files-1.1/design-28.0.0.aar/222095ceb223bc061deae9216b9e59a8/AndroidManifest.xml:17:1-24:12
+MERGED from [com.android.support:appcompat-v7:28.0.0] /home/raph/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/4cea84acd10e5a072d9d394287f02127/AndroidManifest.xml:17:1-22:12
+MERGED from [:capacitor-cordova-android-plugins] /home/raph/Documents/BeninRestoo/foodionic2-single-20190817/android/capacitor-cordova-android-plugins/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-24:12
+MERGED from [com.android.support:support-fragment:28.0.0] /home/raph/.gradle/caches/transforms-1/files-1.1/support-fragment-28.0.0.aar/2f98bfb6ebf5cb4d7e09753e11b1d644/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:animated-vector-drawable:28.0.0] /home/raph/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-28.0.0.aar/f7ee5a06b430d2fa8695ef8ca940d13f/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:customtabs:28.0.0] /home/raph/.gradle/caches/transforms-1/files-1.1/customtabs-28.0.0.aar/b6d86ffd7f24214f07d5ae5ac7b9557a/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:recyclerview-v7:28.0.0] /home/raph/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-28.0.0.aar/4766ea3107df10f26bdd1bf5949f0f8e/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-ui:28.0.0] /home/raph/.gradle/caches/transforms-1/files-1.1/support-core-ui-28.0.0.aar/1dca734637a7af2f72fdb55367eb5c3c/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-utils:28.0.0] /home/raph/.gradle/caches/transforms-1/files-1.1/support-core-utils-28.0.0.aar/784222c50f47966535ff559f70b84fac/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-vector-drawable:28.0.0] /home/raph/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-28.0.0.aar/4cc79c286d1b410a5a6889bfd67bf3b2/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:loader:28.0.0] /home/raph/.gradle/caches/transforms-1/files-1.1/loader-28.0.0.aar/87d729eaabd1d6a704a5c892b9cc7812/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:transition:28.0.0] /home/raph/.gradle/caches/transforms-1/files-1.1/transition-28.0.0.aar/02dc912c2ae2b115097485edf3c02fce/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:viewpager:28.0.0] /home/raph/.gradle/caches/transforms-1/files-1.1/viewpager-28.0.0.aar/2640ced5f8dbe9e689c805c4c993ec8f/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:coordinatorlayout:28.0.0] /home/raph/.gradle/caches/transforms-1/files-1.1/coordinatorlayout-28.0.0.aar/25b3e6e95d76ef047d86917b3e6bd45a/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:drawerlayout:28.0.0] /home/raph/.gradle/caches/transforms-1/files-1.1/drawerlayout-28.0.0.aar/cbd58f16b7bf665ad1bb96f4e41e0ae3/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:slidingpanelayout:28.0.0] /home/raph/.gradle/caches/transforms-1/files-1.1/slidingpanelayout-28.0.0.aar/7ba7a459c29bb7b12e55d3a39438556d/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:customview:28.0.0] /home/raph/.gradle/caches/transforms-1/files-1.1/customview-28.0.0.aar/4c8e425d360e9ada516cf86860be51bf/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:swiperefreshlayout:28.0.0] /home/raph/.gradle/caches/transforms-1/files-1.1/swiperefreshlayout-28.0.0.aar/65fe66525bbc5ccec8a702ab2c65042a/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:asynclayoutinflater:28.0.0] /home/raph/.gradle/caches/transforms-1/files-1.1/asynclayoutinflater-28.0.0.aar/4d70c1c623eced9a3ae4afbb788ae136/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-compat:28.0.0] /home/raph/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/f1914ddf7c1895beaab327924f038d84/AndroidManifest.xml:17:1-24:12
+MERGED from [com.android.support:versionedparcelable:28.0.0] /home/raph/.gradle/caches/transforms-1/files-1.1/versionedparcelable-28.0.0.aar/0ea5c18277134c0a46cdb46b081d0956/AndroidManifest.xml:17:1-25:12
+MERGED from [com.android.support:cursoradapter:28.0.0] /home/raph/.gradle/caches/transforms-1/files-1.1/cursoradapter-28.0.0.aar/fc558c88c11021ce77c92896db14a1cc/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:runtime:1.1.1] /home/raph/.gradle/caches/transforms-1/files-1.1/runtime-1.1.1.aar/b062ee08e59b917b6a72d1c86e3ca2f6/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:documentfile:28.0.0] /home/raph/.gradle/caches/transforms-1/files-1.1/documentfile-28.0.0.aar/1e6250cd181e2d4da831d66ae13b7d39/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:localbroadcastmanager:28.0.0] /home/raph/.gradle/caches/transforms-1/files-1.1/localbroadcastmanager-28.0.0.aar/6fda0f54eb6da8f42a494ca6949b44dc/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:print:28.0.0] /home/raph/.gradle/caches/transforms-1/files-1.1/print-28.0.0.aar/9cba0573baba061e8a00eac6d2f7d845/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:viewmodel:1.1.1] /home/raph/.gradle/caches/transforms-1/files-1.1/viewmodel-1.1.1.aar/1fa668bc91f6be060ee9706ee72f9507/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:cardview-v7:28.0.0] /home/raph/.gradle/caches/transforms-1/files-1.1/cardview-v7-28.0.0.aar/a7d0bddcfcdb1de3209b99245339385c/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:interpolator:28.0.0] /home/raph/.gradle/caches/transforms-1/files-1.1/interpolator-28.0.0.aar/9b3000f406e300ffa350e6f5dccc416a/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:livedata:1.1.1] /home/raph/.gradle/caches/transforms-1/files-1.1/livedata-1.1.1.aar/969f0149acbb2c7be8a2a1ef0734fe8f/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:livedata-core:1.1.1] /home/raph/.gradle/caches/transforms-1/files-1.1/livedata-core-1.1.1.aar/d2bfc6b2008adae482e552875e909dca/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.core:runtime:1.1.1] /home/raph/.gradle/caches/transforms-1/files-1.1/runtime-1.1.1.aar/949624b12c73d686765fe0012a1eb734/AndroidManifest.xml:17:1-22:12
+MERGED from [org.apache.cordova:framework:7.0.0] /home/raph/.gradle/caches/transforms-1/files-1.1/framework-7.0.0.aar/ebdd32fa0c6ed7ece43b1a179a08464d/AndroidManifest.xml:20:1-27:12
+INJECTED from /home/raph/Documents/BeninRestoo/foodionic2-single-20190817/android/app/src/main/AndroidManifest.xml:2:1-63:12
+INJECTED from /home/raph/Documents/BeninRestoo/foodionic2-single-20190817/android/app/src/main/AndroidManifest.xml:2:1-63:12
+INJECTED from /home/raph/Documents/BeninRestoo/foodionic2-single-20190817/android/app/src/main/AndroidManifest.xml:2:1-63:12
+	package
+		ADDED from /home/raph/Documents/BeninRestoo/foodionic2-single-20190817/android/app/src/main/AndroidManifest.xml:3:5-38
+		INJECTED from /home/raph/Documents/BeninRestoo/foodionic2-single-20190817/android/app/src/main/AndroidManifest.xml
+		INJECTED from /home/raph/Documents/BeninRestoo/foodionic2-single-20190817/android/app/src/main/AndroidManifest.xml
+	android:versionName
+		INJECTED from /home/raph/Documents/BeninRestoo/foodionic2-single-20190817/android/app/src/main/AndroidManifest.xml
+		ADDED from /home/raph/Documents/BeninRestoo/foodionic2-single-20190817/android/app/src/main/AndroidManifest.xml:2:1-63:12
+		INJECTED from /home/raph/Documents/BeninRestoo/foodionic2-single-20190817/android/app/src/main/AndroidManifest.xml
+	android:versionCode
+		INJECTED from /home/raph/Documents/BeninRestoo/foodionic2-single-20190817/android/app/src/main/AndroidManifest.xml
+		ADDED from /home/raph/Documents/BeninRestoo/foodionic2-single-20190817/android/app/src/main/AndroidManifest.xml:2:1-63:12
+		INJECTED from /home/raph/Documents/BeninRestoo/foodionic2-single-20190817/android/app/src/main/AndroidManifest.xml
+	xmlns:android
+		ADDED from /home/raph/Documents/BeninRestoo/foodionic2-single-20190817/android/app/src/main/AndroidManifest.xml:2:11-69
+application
+ADDED from /home/raph/Documents/BeninRestoo/foodionic2-single-20190817/android/app/src/main/AndroidManifest.xml:5:5-43:19
+MERGED from [com.android.support:design:28.0.0] /home/raph/.gradle/caches/transforms-1/files-1.1/design-28.0.0.aar/222095ceb223bc061deae9216b9e59a8/AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:design:28.0.0] /home/raph/.gradle/caches/transforms-1/files-1.1/design-28.0.0.aar/222095ceb223bc061deae9216b9e59a8/AndroidManifest.xml:22:5-20
+MERGED from [:capacitor-cordova-android-plugins] /home/raph/Documents/BeninRestoo/foodionic2-single-20190817/android/capacitor-cordova-android-plugins/build/intermediates/library_manifest/debug/AndroidManifest.xml:21:5-22:19
+MERGED from [:capacitor-cordova-android-plugins] /home/raph/Documents/BeninRestoo/foodionic2-single-20190817/android/capacitor-cordova-android-plugins/build/intermediates/library_manifest/debug/AndroidManifest.xml:21:5-22:19
+MERGED from [com.android.support:support-compat:28.0.0] /home/raph/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/f1914ddf7c1895beaab327924f038d84/AndroidManifest.xml:22:5-94
+MERGED from [com.android.support:support-compat:28.0.0] /home/raph/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/f1914ddf7c1895beaab327924f038d84/AndroidManifest.xml:22:5-94
+MERGED from [com.android.support:versionedparcelable:28.0.0] /home/raph/.gradle/caches/transforms-1/files-1.1/versionedparcelable-28.0.0.aar/0ea5c18277134c0a46cdb46b081d0956/AndroidManifest.xml:22:5-23:19
+MERGED from [com.android.support:versionedparcelable:28.0.0] /home/raph/.gradle/caches/transforms-1/files-1.1/versionedparcelable-28.0.0.aar/0ea5c18277134c0a46cdb46b081d0956/AndroidManifest.xml:22:5-23:19
+	android:appComponentFactory
+		ADDED from [com.android.support:support-compat:28.0.0] /home/raph/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/f1914ddf7c1895beaab327924f038d84/AndroidManifest.xml:22:18-91
+	android:supportsRtl
+		ADDED from /home/raph/Documents/BeninRestoo/foodionic2-single-20190817/android/app/src/main/AndroidManifest.xml:10:9-35
+	android:label
+		ADDED from /home/raph/Documents/BeninRestoo/foodionic2-single-20190817/android/app/src/main/AndroidManifest.xml:8:9-41
+	android:roundIcon
+		ADDED from /home/raph/Documents/BeninRestoo/foodionic2-single-20190817/android/app/src/main/AndroidManifest.xml:9:9-54
+	android:icon
+		ADDED from /home/raph/Documents/BeninRestoo/foodionic2-single-20190817/android/app/src/main/AndroidManifest.xml:7:9-43
+	android:allowBackup
+		ADDED from /home/raph/Documents/BeninRestoo/foodionic2-single-20190817/android/app/src/main/AndroidManifest.xml:6:9-35
+	android:theme
+		ADDED from /home/raph/Documents/BeninRestoo/foodionic2-single-20190817/android/app/src/main/AndroidManifest.xml:11:9-40
+activity#com.example.BeninRestoo.MainActivity
+ADDED from /home/raph/Documents/BeninRestoo/foodionic2-single-20190817/android/app/src/main/AndroidManifest.xml:13:9-32:20
+	android:label
+		ADDED from /home/raph/Documents/BeninRestoo/foodionic2-single-20190817/android/app/src/main/AndroidManifest.xml:16:13-56
+	android:launchMode
+		ADDED from /home/raph/Documents/BeninRestoo/foodionic2-single-20190817/android/app/src/main/AndroidManifest.xml:18:13-44
+	android:configChanges
+		ADDED from /home/raph/Documents/BeninRestoo/foodionic2-single-20190817/android/app/src/main/AndroidManifest.xml:14:13-90
+	android:theme
+		ADDED from /home/raph/Documents/BeninRestoo/foodionic2-single-20190817/android/app/src/main/AndroidManifest.xml:17:13-62
+	android:name
+		ADDED from /home/raph/Documents/BeninRestoo/foodionic2-single-20190817/android/app/src/main/AndroidManifest.xml:15:13-64
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from /home/raph/Documents/BeninRestoo/foodionic2-single-20190817/android/app/src/main/AndroidManifest.xml:20:13-23:29
+action#android.intent.action.MAIN
+ADDED from /home/raph/Documents/BeninRestoo/foodionic2-single-20190817/android/app/src/main/AndroidManifest.xml:21:17-69
+	android:name
+		ADDED from /home/raph/Documents/BeninRestoo/foodionic2-single-20190817/android/app/src/main/AndroidManifest.xml:21:25-66
+category#android.intent.category.LAUNCHER
+ADDED from /home/raph/Documents/BeninRestoo/foodionic2-single-20190817/android/app/src/main/AndroidManifest.xml:22:17-77
+	android:name
+		ADDED from /home/raph/Documents/BeninRestoo/foodionic2-single-20190817/android/app/src/main/AndroidManifest.xml:22:27-74
+intent-filter#action:name:android.intent.action.VIEW+category:name:android.intent.category.BROWSABLE+category:name:android.intent.category.DEFAULT+data:scheme:@string/custom_url_scheme
+ADDED from /home/raph/Documents/BeninRestoo/foodionic2-single-20190817/android/app/src/main/AndroidManifest.xml:25:13-30:29
+action#android.intent.action.VIEW
+ADDED from /home/raph/Documents/BeninRestoo/foodionic2-single-20190817/android/app/src/main/AndroidManifest.xml:26:17-69
+	android:name
+		ADDED from /home/raph/Documents/BeninRestoo/foodionic2-single-20190817/android/app/src/main/AndroidManifest.xml:26:25-66
+category#android.intent.category.DEFAULT
+ADDED from /home/raph/Documents/BeninRestoo/foodionic2-single-20190817/android/app/src/main/AndroidManifest.xml:27:17-76
+	android:name
+		ADDED from /home/raph/Documents/BeninRestoo/foodionic2-single-20190817/android/app/src/main/AndroidManifest.xml:27:27-73
+category#android.intent.category.BROWSABLE
+ADDED from /home/raph/Documents/BeninRestoo/foodionic2-single-20190817/android/app/src/main/AndroidManifest.xml:28:17-78
+	android:name
+		ADDED from /home/raph/Documents/BeninRestoo/foodionic2-single-20190817/android/app/src/main/AndroidManifest.xml:28:27-75
+data
+ADDED from /home/raph/Documents/BeninRestoo/foodionic2-single-20190817/android/app/src/main/AndroidManifest.xml:29:17-68
+	android:scheme
+		ADDED from /home/raph/Documents/BeninRestoo/foodionic2-single-20190817/android/app/src/main/AndroidManifest.xml:29:23-65
+uses-permission#android.permission.INTERNET
+ADDED from /home/raph/Documents/BeninRestoo/foodionic2-single-20190817/android/app/src/main/AndroidManifest.xml:47:5-67
+MERGED from [:capacitor-cordova-android-plugins] /home/raph/Documents/BeninRestoo/foodionic2-single-20190817/android/capacitor-cordova-android-plugins/build/intermediates/library_manifest/debug/AndroidManifest.xml:12:5-67
+MERGED from [:capacitor-cordova-android-plugins] /home/raph/Documents/BeninRestoo/foodionic2-single-20190817/android/capacitor-cordova-android-plugins/build/intermediates/library_manifest/debug/AndroidManifest.xml:12:5-67
+	android:name
+		ADDED from /home/raph/Documents/BeninRestoo/foodionic2-single-20190817/android/app/src/main/AndroidManifest.xml:47:22-64
+uses-permission#android.permission.READ_EXTERNAL_STORAGE
+ADDED from /home/raph/Documents/BeninRestoo/foodionic2-single-20190817/android/app/src/main/AndroidManifest.xml:49:5-79
+	android:name
+		ADDED from /home/raph/Documents/BeninRestoo/foodionic2-single-20190817/android/app/src/main/AndroidManifest.xml:49:22-77
+uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
+ADDED from /home/raph/Documents/BeninRestoo/foodionic2-single-20190817/android/app/src/main/AndroidManifest.xml:50:5-81
+MERGED from [:capacitor-cordova-android-plugins] /home/raph/Documents/BeninRestoo/foodionic2-single-20190817/android/capacitor-cordova-android-plugins/build/intermediates/library_manifest/debug/AndroidManifest.xml:13:5-81
+MERGED from [:capacitor-cordova-android-plugins] /home/raph/Documents/BeninRestoo/foodionic2-single-20190817/android/capacitor-cordova-android-plugins/build/intermediates/library_manifest/debug/AndroidManifest.xml:13:5-81
+	android:name
+		ADDED from /home/raph/Documents/BeninRestoo/foodionic2-single-20190817/android/app/src/main/AndroidManifest.xml:50:22-78
+uses-permission#android.permission.ACCESS_COARSE_LOCATION
+ADDED from /home/raph/Documents/BeninRestoo/foodionic2-single-20190817/android/app/src/main/AndroidManifest.xml:52:5-81
+MERGED from [:capacitor-cordova-android-plugins] /home/raph/Documents/BeninRestoo/foodionic2-single-20190817/android/capacitor-cordova-android-plugins/build/intermediates/library_manifest/debug/AndroidManifest.xml:14:5-81
+MERGED from [:capacitor-cordova-android-plugins] /home/raph/Documents/BeninRestoo/foodionic2-single-20190817/android/capacitor-cordova-android-plugins/build/intermediates/library_manifest/debug/AndroidManifest.xml:14:5-81
+	android:name
+		ADDED from /home/raph/Documents/BeninRestoo/foodionic2-single-20190817/android/app/src/main/AndroidManifest.xml:52:22-78
+uses-permission#android.permission.ACCESS_FINE_LOCATION
+ADDED from /home/raph/Documents/BeninRestoo/foodionic2-single-20190817/android/app/src/main/AndroidManifest.xml:53:5-79
+MERGED from [:capacitor-cordova-android-plugins] /home/raph/Documents/BeninRestoo/foodionic2-single-20190817/android/capacitor-cordova-android-plugins/build/intermediates/library_manifest/debug/AndroidManifest.xml:15:5-79
+MERGED from [:capacitor-cordova-android-plugins] /home/raph/Documents/BeninRestoo/foodionic2-single-20190817/android/capacitor-cordova-android-plugins/build/intermediates/library_manifest/debug/AndroidManifest.xml:15:5-79
+	android:name
+		ADDED from /home/raph/Documents/BeninRestoo/foodionic2-single-20190817/android/app/src/main/AndroidManifest.xml:53:22-76
+uses-feature#android.hardware.location.gps
+ADDED from /home/raph/Documents/BeninRestoo/foodionic2-single-20190817/android/app/src/main/AndroidManifest.xml:54:5-66
+MERGED from [:capacitor-cordova-android-plugins] /home/raph/Documents/BeninRestoo/foodionic2-single-20190817/android/capacitor-cordova-android-plugins/build/intermediates/library_manifest/debug/AndroidManifest.xml:17:5-66
+MERGED from [:capacitor-cordova-android-plugins] /home/raph/Documents/BeninRestoo/foodionic2-single-20190817/android/capacitor-cordova-android-plugins/build/intermediates/library_manifest/debug/AndroidManifest.xml:17:5-66
+	android:name
+		ADDED from /home/raph/Documents/BeninRestoo/foodionic2-single-20190817/android/app/src/main/AndroidManifest.xml:54:19-63
+uses-permission#android.permission.ACCESS_NETWORK_STATE
+ADDED from /home/raph/Documents/BeninRestoo/foodionic2-single-20190817/android/app/src/main/AndroidManifest.xml:56:5-79
+MERGED from [:capacitor-cordova-android-plugins] /home/raph/Documents/BeninRestoo/foodionic2-single-20190817/android/capacitor-cordova-android-plugins/build/intermediates/library_manifest/debug/AndroidManifest.xml:19:5-79
+MERGED from [:capacitor-cordova-android-plugins] /home/raph/Documents/BeninRestoo/foodionic2-single-20190817/android/capacitor-cordova-android-plugins/build/intermediates/library_manifest/debug/AndroidManifest.xml:19:5-79
+	android:name
+		ADDED from /home/raph/Documents/BeninRestoo/foodionic2-single-20190817/android/app/src/main/AndroidManifest.xml:56:22-76
+uses-permission#android.permission.CAMERA
+ADDED from /home/raph/Documents/BeninRestoo/foodionic2-single-20190817/android/app/src/main/AndroidManifest.xml:59:5-65
+	android:name
+		ADDED from /home/raph/Documents/BeninRestoo/foodionic2-single-20190817/android/app/src/main/AndroidManifest.xml:59:22-62
+uses-permission#android.permission.RECORD_AUDIO
+ADDED from /home/raph/Documents/BeninRestoo/foodionic2-single-20190817/android/app/src/main/AndroidManifest.xml:61:5-71
+	android:name
+		ADDED from /home/raph/Documents/BeninRestoo/foodionic2-single-20190817/android/app/src/main/AndroidManifest.xml:61:22-68
+uses-permission#android.permission.MODIFY_AUDIO_SETTINGS
+ADDED from /home/raph/Documents/BeninRestoo/foodionic2-single-20190817/android/app/src/main/AndroidManifest.xml:62:5-79
+	android:name
+		ADDED from /home/raph/Documents/BeninRestoo/foodionic2-single-20190817/android/app/src/main/AndroidManifest.xml:62:22-77
+uses-sdk
+INJECTED from /home/raph/Documents/BeninRestoo/foodionic2-single-20190817/android/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from /home/raph/Documents/BeninRestoo/foodionic2-single-20190817/android/app/src/main/AndroidManifest.xml
+INJECTED from /home/raph/Documents/BeninRestoo/foodionic2-single-20190817/android/app/src/main/AndroidManifest.xml
+MERGED from [:capacitor-android] /home/raph/Documents/BeninRestoo/foodionic2-single-20190817/node_modules/@capacitor/android/capacitor/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:capacitor-android] /home/raph/Documents/BeninRestoo/foodionic2-single-20190817/node_modules/@capacitor/android/capacitor/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [com.android.support:design:28.0.0] /home/raph/.gradle/caches/transforms-1/files-1.1/design-28.0.0.aar/222095ceb223bc061deae9216b9e59a8/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:design:28.0.0] /home/raph/.gradle/caches/transforms-1/files-1.1/design-28.0.0.aar/222095ceb223bc061deae9216b9e59a8/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:appcompat-v7:28.0.0] /home/raph/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/4cea84acd10e5a072d9d394287f02127/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:appcompat-v7:28.0.0] /home/raph/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/4cea84acd10e5a072d9d394287f02127/AndroidManifest.xml:20:5-44
+MERGED from [:capacitor-cordova-android-plugins] /home/raph/Documents/BeninRestoo/foodionic2-single-20190817/android/capacitor-cordova-android-plugins/build/intermediates/library_manifest/debug/AndroidManifest.xml:8:5-10:41
+MERGED from [:capacitor-cordova-android-plugins] /home/raph/Documents/BeninRestoo/foodionic2-single-20190817/android/capacitor-cordova-android-plugins/build/intermediates/library_manifest/debug/AndroidManifest.xml:8:5-10:41
+MERGED from [com.android.support:support-fragment:28.0.0] /home/raph/.gradle/caches/transforms-1/files-1.1/support-fragment-28.0.0.aar/2f98bfb6ebf5cb4d7e09753e11b1d644/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-fragment:28.0.0] /home/raph/.gradle/caches/transforms-1/files-1.1/support-fragment-28.0.0.aar/2f98bfb6ebf5cb4d7e09753e11b1d644/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:28.0.0] /home/raph/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-28.0.0.aar/f7ee5a06b430d2fa8695ef8ca940d13f/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:28.0.0] /home/raph/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-28.0.0.aar/f7ee5a06b430d2fa8695ef8ca940d13f/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:customtabs:28.0.0] /home/raph/.gradle/caches/transforms-1/files-1.1/customtabs-28.0.0.aar/b6d86ffd7f24214f07d5ae5ac7b9557a/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:customtabs:28.0.0] /home/raph/.gradle/caches/transforms-1/files-1.1/customtabs-28.0.0.aar/b6d86ffd7f24214f07d5ae5ac7b9557a/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:recyclerview-v7:28.0.0] /home/raph/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-28.0.0.aar/4766ea3107df10f26bdd1bf5949f0f8e/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:recyclerview-v7:28.0.0] /home/raph/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-28.0.0.aar/4766ea3107df10f26bdd1bf5949f0f8e/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:28.0.0] /home/raph/.gradle/caches/transforms-1/files-1.1/support-core-ui-28.0.0.aar/1dca734637a7af2f72fdb55367eb5c3c/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:28.0.0] /home/raph/.gradle/caches/transforms-1/files-1.1/support-core-ui-28.0.0.aar/1dca734637a7af2f72fdb55367eb5c3c/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:28.0.0] /home/raph/.gradle/caches/transforms-1/files-1.1/support-core-utils-28.0.0.aar/784222c50f47966535ff559f70b84fac/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:28.0.0] /home/raph/.gradle/caches/transforms-1/files-1.1/support-core-utils-28.0.0.aar/784222c50f47966535ff559f70b84fac/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:28.0.0] /home/raph/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-28.0.0.aar/4cc79c286d1b410a5a6889bfd67bf3b2/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:28.0.0] /home/raph/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-28.0.0.aar/4cc79c286d1b410a5a6889bfd67bf3b2/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:loader:28.0.0] /home/raph/.gradle/caches/transforms-1/files-1.1/loader-28.0.0.aar/87d729eaabd1d6a704a5c892b9cc7812/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:loader:28.0.0] /home/raph/.gradle/caches/transforms-1/files-1.1/loader-28.0.0.aar/87d729eaabd1d6a704a5c892b9cc7812/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:transition:28.0.0] /home/raph/.gradle/caches/transforms-1/files-1.1/transition-28.0.0.aar/02dc912c2ae2b115097485edf3c02fce/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:transition:28.0.0] /home/raph/.gradle/caches/transforms-1/files-1.1/transition-28.0.0.aar/02dc912c2ae2b115097485edf3c02fce/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:viewpager:28.0.0] /home/raph/.gradle/caches/transforms-1/files-1.1/viewpager-28.0.0.aar/2640ced5f8dbe9e689c805c4c993ec8f/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:viewpager:28.0.0] /home/raph/.gradle/caches/transforms-1/files-1.1/viewpager-28.0.0.aar/2640ced5f8dbe9e689c805c4c993ec8f/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:coordinatorlayout:28.0.0] /home/raph/.gradle/caches/transforms-1/files-1.1/coordinatorlayout-28.0.0.aar/25b3e6e95d76ef047d86917b3e6bd45a/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:coordinatorlayout:28.0.0] /home/raph/.gradle/caches/transforms-1/files-1.1/coordinatorlayout-28.0.0.aar/25b3e6e95d76ef047d86917b3e6bd45a/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:drawerlayout:28.0.0] /home/raph/.gradle/caches/transforms-1/files-1.1/drawerlayout-28.0.0.aar/cbd58f16b7bf665ad1bb96f4e41e0ae3/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:drawerlayout:28.0.0] /home/raph/.gradle/caches/transforms-1/files-1.1/drawerlayout-28.0.0.aar/cbd58f16b7bf665ad1bb96f4e41e0ae3/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:slidingpanelayout:28.0.0] /home/raph/.gradle/caches/transforms-1/files-1.1/slidingpanelayout-28.0.0.aar/7ba7a459c29bb7b12e55d3a39438556d/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:slidingpanelayout:28.0.0] /home/raph/.gradle/caches/transforms-1/files-1.1/slidingpanelayout-28.0.0.aar/7ba7a459c29bb7b12e55d3a39438556d/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:customview:28.0.0] /home/raph/.gradle/caches/transforms-1/files-1.1/customview-28.0.0.aar/4c8e425d360e9ada516cf86860be51bf/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:customview:28.0.0] /home/raph/.gradle/caches/transforms-1/files-1.1/customview-28.0.0.aar/4c8e425d360e9ada516cf86860be51bf/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:swiperefreshlayout:28.0.0] /home/raph/.gradle/caches/transforms-1/files-1.1/swiperefreshlayout-28.0.0.aar/65fe66525bbc5ccec8a702ab2c65042a/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:swiperefreshlayout:28.0.0] /home/raph/.gradle/caches/transforms-1/files-1.1/swiperefreshlayout-28.0.0.aar/65fe66525bbc5ccec8a702ab2c65042a/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:asynclayoutinflater:28.0.0] /home/raph/.gradle/caches/transforms-1/files-1.1/asynclayoutinflater-28.0.0.aar/4d70c1c623eced9a3ae4afbb788ae136/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:asynclayoutinflater:28.0.0] /home/raph/.gradle/caches/transforms-1/files-1.1/asynclayoutinflater-28.0.0.aar/4d70c1c623eced9a3ae4afbb788ae136/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:28.0.0] /home/raph/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/f1914ddf7c1895beaab327924f038d84/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:28.0.0] /home/raph/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/f1914ddf7c1895beaab327924f038d84/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:versionedparcelable:28.0.0] /home/raph/.gradle/caches/transforms-1/files-1.1/versionedparcelable-28.0.0.aar/0ea5c18277134c0a46cdb46b081d0956/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:versionedparcelable:28.0.0] /home/raph/.gradle/caches/transforms-1/files-1.1/versionedparcelable-28.0.0.aar/0ea5c18277134c0a46cdb46b081d0956/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cursoradapter:28.0.0] /home/raph/.gradle/caches/transforms-1/files-1.1/cursoradapter-28.0.0.aar/fc558c88c11021ce77c92896db14a1cc/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cursoradapter:28.0.0] /home/raph/.gradle/caches/transforms-1/files-1.1/cursoradapter-28.0.0.aar/fc558c88c11021ce77c92896db14a1cc/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.1.1] /home/raph/.gradle/caches/transforms-1/files-1.1/runtime-1.1.1.aar/b062ee08e59b917b6a72d1c86e3ca2f6/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.1.1] /home/raph/.gradle/caches/transforms-1/files-1.1/runtime-1.1.1.aar/b062ee08e59b917b6a72d1c86e3ca2f6/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:documentfile:28.0.0] /home/raph/.gradle/caches/transforms-1/files-1.1/documentfile-28.0.0.aar/1e6250cd181e2d4da831d66ae13b7d39/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:documentfile:28.0.0] /home/raph/.gradle/caches/transforms-1/files-1.1/documentfile-28.0.0.aar/1e6250cd181e2d4da831d66ae13b7d39/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:localbroadcastmanager:28.0.0] /home/raph/.gradle/caches/transforms-1/files-1.1/localbroadcastmanager-28.0.0.aar/6fda0f54eb6da8f42a494ca6949b44dc/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:localbroadcastmanager:28.0.0] /home/raph/.gradle/caches/transforms-1/files-1.1/localbroadcastmanager-28.0.0.aar/6fda0f54eb6da8f42a494ca6949b44dc/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:print:28.0.0] /home/raph/.gradle/caches/transforms-1/files-1.1/print-28.0.0.aar/9cba0573baba061e8a00eac6d2f7d845/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:print:28.0.0] /home/raph/.gradle/caches/transforms-1/files-1.1/print-28.0.0.aar/9cba0573baba061e8a00eac6d2f7d845/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.1] /home/raph/.gradle/caches/transforms-1/files-1.1/viewmodel-1.1.1.aar/1fa668bc91f6be060ee9706ee72f9507/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.1] /home/raph/.gradle/caches/transforms-1/files-1.1/viewmodel-1.1.1.aar/1fa668bc91f6be060ee9706ee72f9507/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cardview-v7:28.0.0] /home/raph/.gradle/caches/transforms-1/files-1.1/cardview-v7-28.0.0.aar/a7d0bddcfcdb1de3209b99245339385c/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cardview-v7:28.0.0] /home/raph/.gradle/caches/transforms-1/files-1.1/cardview-v7-28.0.0.aar/a7d0bddcfcdb1de3209b99245339385c/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:interpolator:28.0.0] /home/raph/.gradle/caches/transforms-1/files-1.1/interpolator-28.0.0.aar/9b3000f406e300ffa350e6f5dccc416a/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:interpolator:28.0.0] /home/raph/.gradle/caches/transforms-1/files-1.1/interpolator-28.0.0.aar/9b3000f406e300ffa350e6f5dccc416a/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata:1.1.1] /home/raph/.gradle/caches/transforms-1/files-1.1/livedata-1.1.1.aar/969f0149acbb2c7be8a2a1ef0734fe8f/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata:1.1.1] /home/raph/.gradle/caches/transforms-1/files-1.1/livedata-1.1.1.aar/969f0149acbb2c7be8a2a1ef0734fe8f/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata-core:1.1.1] /home/raph/.gradle/caches/transforms-1/files-1.1/livedata-core-1.1.1.aar/d2bfc6b2008adae482e552875e909dca/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata-core:1.1.1] /home/raph/.gradle/caches/transforms-1/files-1.1/livedata-core-1.1.1.aar/d2bfc6b2008adae482e552875e909dca/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.1] /home/raph/.gradle/caches/transforms-1/files-1.1/runtime-1.1.1.aar/949624b12c73d686765fe0012a1eb734/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.1] /home/raph/.gradle/caches/transforms-1/files-1.1/runtime-1.1.1.aar/949624b12c73d686765fe0012a1eb734/AndroidManifest.xml:20:5-44
+MERGED from [org.apache.cordova:framework:7.0.0] /home/raph/.gradle/caches/transforms-1/files-1.1/framework-7.0.0.aar/ebdd32fa0c6ed7ece43b1a179a08464d/AndroidManifest.xml:25:5-44
+MERGED from [org.apache.cordova:framework:7.0.0] /home/raph/.gradle/caches/transforms-1/files-1.1/framework-7.0.0.aar/ebdd32fa0c6ed7ece43b1a179a08464d/AndroidManifest.xml:25:5-44
+INJECTED from /home/raph/Documents/BeninRestoo/foodionic2-single-20190817/android/app/src/main/AndroidManifest.xml
+INJECTED from /home/raph/Documents/BeninRestoo/foodionic2-single-20190817/android/app/src/main/AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from /home/raph/Documents/BeninRestoo/foodionic2-single-20190817/android/app/src/main/AndroidManifest.xml
+		ADDED from /home/raph/Documents/BeninRestoo/foodionic2-single-20190817/android/app/src/main/AndroidManifest.xml
+		INJECTED from /home/raph/Documents/BeninRestoo/foodionic2-single-20190817/android/app/src/main/AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from /home/raph/Documents/BeninRestoo/foodionic2-single-20190817/android/app/src/main/AndroidManifest.xml
+		ADDED from /home/raph/Documents/BeninRestoo/foodionic2-single-20190817/android/app/src/main/AndroidManifest.xml
+		INJECTED from /home/raph/Documents/BeninRestoo/foodionic2-single-20190817/android/app/src/main/AndroidManifest.xml
+meta-data#android.support.FILE_PROVIDER_PATHS
+ADDED from /home/raph/Documents/BeninRestoo/foodionic2-single-20190817/android/app/src/main/AndroidManifest.xml:39:13-41:64
+	android:resource
+		ADDED from /home/raph/Documents/BeninRestoo/foodionic2-single-20190817/android/app/src/main/AndroidManifest.xml:41:17-51
+	android:name
+		ADDED from /home/raph/Documents/BeninRestoo/foodionic2-single-20190817/android/app/src/main/AndroidManifest.xml:40:17-67
+uses-feature#android.hardware.camera
+ADDED from [:capacitor-android] /home/raph/Documents/BeninRestoo/foodionic2-single-20190817/node_modules/@capacitor/android/capacitor/build/intermediates/library_manifest/debug/AndroidManifest.xml:11:5-13:36
+	android:required
+		ADDED from [:capacitor-android] /home/raph/Documents/BeninRestoo/foodionic2-single-20190817/node_modules/@capacitor/android/capacitor/build/intermediates/library_manifest/debug/AndroidManifest.xml:13:9-33
+	android:name
+		ADDED from [:capacitor-android] /home/raph/Documents/BeninRestoo/foodionic2-single-20190817/node_modules/@capacitor/android/capacitor/build/intermediates/library_manifest/debug/AndroidManifest.xml:12:9-47

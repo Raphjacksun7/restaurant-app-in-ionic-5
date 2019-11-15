@@ -1,0 +1,81 @@
+:host {
+    ion-content {
+        --background: var(--ion-color-light);
+    }
+
+    ion-segment {
+        display: inline-block;
+        white-space: nowrap;
+        font-size: 0;
+        overflow-x: scroll;
+        height: 44px;
+
+        &::-webkit-scrollbar {
+            width: 0;
+            height: 0;
+            display: none;
+        }
+    
+        ion-segment-button.segment-button {
+            display: inline-block;
+            min-width: 115px;
+            // margin: 5px;
+            width: auto;
+            // font-size: 16px;
+            // padding: 5px;
+            //  border: 1px solid ;
+            // border-radius: 2px;
+          }
+
+          segment-button-checked{
+            background: #FFF;
+            color: var(--ion-color-dark);
+            border-bottom: 3px solid var(--ion-color-primary);
+        }
+
+    }
+    
+}
+  
+
+agm-map {
+    height: 180px;
+    .gmnoprint {
+      display: none !important;
+    }
+}
+  
+
+
+.ion-slide {
+    height: calc(100vh - 140px);
+}
+
+
+.card-img-status {
+    width: 120px;
+    position: absolute;
+    transform: rotate(45deg);
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+    top: 10px;
+    right: -30px;
+    z-index: 99;
+    text-align: center;
+    &.closed {
+        background-color: rgba(var(--ion-color-primary-rgb), .8);
+    }
+    &.open {
+        background-color: rgba(var(--ion-color-success-rgb), .8);
+    }
+}
+
+.card-image {
+    width: 100%;
+    height: 40vw;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+ 

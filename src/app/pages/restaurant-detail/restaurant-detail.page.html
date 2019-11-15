@@ -1,0 +1,87 @@
+<ion-header>
+  <ion-toolbar color="dark">
+    <ion-buttons color="light" slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+
+    <ion-buttons slot="end">
+      <ion-button size="small" shape="round" (click)="message()">
+          <ion-icon ios="ios-mail" md="md-mail"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content color="bg-light">
+  <ion-grid no-padding no-margin *ngFor="let restaurant of restaurants">
+      <ion-card no-margin no-padding class="bg-white">
+          <div class="card-image" [style.background-image]="'url(' + restaurant.img + ')'"></div>
+          <ion-card-header>
+              <ion-badge class="float" vertical="top" horizontal="end" edge>
+                  <ion-icon name="star" color="light"></ion-icon>
+                  <ion-text color="light"> {{ restaurant.isClose ? 'Fermer' : 'Ouvert' }} </ion-text>
+              </ion-badge>
+              <ion-card-title margin-bottom>           
+                  <ion-text color="warning-contrast">{{ restaurant.nom}}</ion-text>
+              </ion-card-title>
+              <ion-card-subtitle>       
+                <ion-text color="warning-contrast">{{restaurant.speciality}}</ion-text>
+              </ion-card-subtitle>
+              <div margin-bottom>           
+                <ion-text color="warning-contrast">{{ restaurant.detail }}</ion-text>
+              </div>
+          </ion-card-header>
+          <ion-card-content no-padding></ion-card-content>
+     </ion-card>
+  </ion-grid>
+
+	<ion-grid no-padding>
+      <ion-row no-padding>
+        <ion-col>
+          <ion-toolbar mode="md">
+            <ion-segment mode="md" (ionChange)="segmentChanged()" [(ngModel)]="segment" color="primary">
+              <ion-segment-button  *ngFor="let menu of menus; let i = index" class="segment-button" value="{{ i }}">
+                  <ion-label>{{ menu.nom }}</ion-label>
+              </ion-segment-button>
+            </ion-segment>
+          </ion-toolbar>
+
+          <ion-slides class="ion-slide" #slides (ionSlideDidChange)="slideChanged()" >
+              <ion-slide *ngFor="let menu of menus">
+                  <ion-content color="bg-light">
+                      <ion-row>
+                          <ion-col>
+                              <ion-card class="bg-white" *ngFor="let produit of menu.produits" (click)="dishDetail(produit.id,produit.supplements)">
+                                  <ion-card-content no-padding>
+                                      <ion-item lines="none">
+                                        <ion-label>
+                                          <h2 class="fw700 text08">
+                                            <ion-text color="warning-contrast">{{produit.nom}}</ion-text>
+                                          </h2>
+                                          
+                                            <ion-text text-wrap color="warning-contrast" style="font-size: 14px;">{{ produit.description }}</ion-text>
+                                       
+                                        </ion-label>
+                                        <ion-badge  color="success">
+                                          <ion-text color="light">{{ produit.prix }} F CFA</ion-text>
+                                        </ion-badge>
+                                      </ion-item>
+                                  </ion-card-content>
+                                </ion-card>
+                          </ion-col>
+                      </ion-row>
+                  </ion-content>
+              </ion-slide>
+            </ion-slides>
+          </ion-col>
+      </ion-row>
+    </ion-grid>
+
+</ion-content>
+<ion-footer padding>
+  <ion-button size="default" expand="block" color="dark" (click)="openCart()">
+    <ion-text slot="start" color="light"> 1 Produit </ion-text>
+    <ion-text color="light"> Panier </ion-text>
+    <ion-text slot="end" color="light"> 1500F CFA </ion-text>
+  </ion-button>
+</ion-footer>

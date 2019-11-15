@@ -1,0 +1,55 @@
+<ion-header>
+  <ion-toolbar color="dark">
+    <ion-buttons slot="start">
+      <ion-button size="small" shape="round" (click)="closeModal()" color="light">
+        <ion-icon slot="start" name="close"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding color="bg-white">
+
+ <div padding-horizontal class="animated fadeInDown">
+  <ion-label ion-text text-justify>
+        Recommandez-nous des restaurants que vous souhaitez voir sur BeninRestoo.
+         Nous les contacterons pour rejoindre notre plateforme.
+  </ion-label>
+</div>
+
+<!--  form -->
+<form padding [formGroup]="onSendForm" #form="ngForm"  method="post" class="list-form">
+  <ion-item no-padding class="animated fadeInUp">
+    <ion-label position="floating">
+        Nom du restaurant
+    </ion-label>
+    <ion-input color="secondary" [(ngModel)]="name" type="text" name="name" formControlName="name"></ion-input>
+  </ion-item>
+
+  <ion-item no-padding class="animated fadeInUp">
+    <ion-label position="floating">
+        Rue
+    </ion-label>
+    <ion-input color="secondary" [(ngModel)]="road" type="text" name="road" formControlName="road"></ion-input>
+  </ion-item>
+
+  <ion-item no-padding class="animated fadeInUp">
+    <ion-label position="floating">
+      Numéro de téléphone (optionel)
+    </ion-label>
+    <ion-input color="secondary" type="text" [(ngModel)]="tel" name="tel" formControlName="tel"></ion-input>
+  </ion-item>
+
+  <ion-item no-padding class="animated fadeInUp">
+    <ion-label position="floating">
+      Commentaire (optionel)
+    </ion-label>
+    <ion-input color="secondary" type="text" [(ngModel)]="comment" name="comment" formControlName="comment"></ion-input>
+  </ion-item>
+</form>
+
+  <ion-button size="medium" expand="block"  color="dark" (click)="sendSuggest()" [disabled]="!onSendForm.valid" tappable>
+    Envoyez votre suggestion
+  </ion-button>
+
+</ion-content>

@@ -1,0 +1,88 @@
+<ion-app>
+  <ion-split-pane>
+    <ion-menu>
+      <ion-header>
+        <ion-toolbar color="tertiary" class="user-profile">
+
+          <ion-item margin-bottom>
+            <ion-avatar slot="start" class="user-avatar">
+              <img src="assets/imgs/log1.jpeg">
+            </ion-avatar>
+            <ion-label *ngIf="!mydata">
+                <ion-text color="light">
+                  <h2><strong>Connectez-vous</strong></h2>
+                </ion-text>
+            </ion-label>
+            <ion-label *ngIf="mydata">
+                <ion-text color="light">
+                  <h1><strong>{{ username }}</strong></h1>
+                </ion-text>
+                <ion-menu-toggle class="mto" auto-hide="false">
+                  <a class="text08" tappable (click)="goToEditProgile()">
+                    <ion-text color="dark">
+                      <ion-icon name="contact"></ion-icon>
+                      <strong>Mon Compte</strong>
+                    </ion-text>
+                  </a>
+                   <!-- <ion-text color="dark"> | </ion-text> 
+                  <a class="text08" tappable (click)="logout()">
+                    <ion-text color="dark">
+                      <ion-icon name="log-out"></ion-icon>
+                      <strong>{{ 'app.pages.menu.logout' | translate }}</strong>
+                    </ion-text>
+                  </a> -->
+                </ion-menu-toggle>
+            </ion-label>
+          </ion-item>
+
+        </ion-toolbar>
+      </ion-header>
+
+      <ion-content class="bg-profile">
+        <ion-list>
+          <ion-menu-toggle auto-hide="false" *ngFor="let p of appPages">
+              <ion-col class="ion-padding-vertical">
+                  <ion-item lines="none"[routerLink]="[p.url]" color="secondary-contrast">
+                      <ion-icon slot="start" [name]="p.icon" color="secondary-contrast"></ion-icon>
+                      <ion-label>
+                        {{p.title}}
+                      </ion-label>
+                    </ion-item>
+                </ion-col>
+          </ion-menu-toggle>
+          <ion-menu-toggle auto-hide="false">
+            <ion-col>
+              <ion-item lines="none" tappable (click)="logout()" class="gray">
+                    <ion-icon slot="start" ios="ios-log-out" md="md-log-out" color="secondary-contrast"></ion-icon>
+                    <ion-label>
+                        Déconnexion
+                    </ion-label>
+              </ion-item>
+            </ion-col>
+          </ion-menu-toggle>
+          <ion-menu-toggle auto-hide="false">
+              <ion-col class="ion-padding-vertical">
+                <ion-item lines="none" routerLink="/about" color="secondary-contrast">
+                      <ion-icon slot="start" name="information-circle-outline" color="secondary-contrast"></ion-icon>
+                      <ion-label>
+                          Informations
+                      </ion-label>
+                </ion-item>
+              </ion-col>
+            </ion-menu-toggle>
+            <ion-menu-toggle auto-hide="false">
+                <ion-col class="ion-padding-vertical">
+                    <ion-item lines="none" target="_blank" href="https://beninrestoo.com/contract/privacypolicy" color="secondary-contrast">
+                      <ion-icon slot="start" name="more" color="secondary-contrast"></ion-icon>
+                      <ion-label>
+                          Policy and Privacy
+                      </ion-label>
+                    </ion-item>
+                </ion-col>
+              </ion-menu-toggle>          
+        </ion-list>
+      </ion-content>
+    </ion-menu>
+    <ion-router-outlet main></ion-router-outlet>
+  </ion-split-pane>
+</ion-app>

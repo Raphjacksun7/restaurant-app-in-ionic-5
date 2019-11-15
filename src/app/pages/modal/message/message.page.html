@@ -1,0 +1,34 @@
+<ion-header>
+  <ion-toolbar color="dark">
+    <ion-button slot="start" class="button" (click)="closeModal()" color="dark">
+      <ion-icon slot="icon-only" name="arrow-round-back" color="light"></ion-icon>
+    </ion-button>
+    <ion-title *ngFor="let name of restaurant" > {{ name.nom }} </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding color="bg-light" class="animated fadeIn">
+
+  <h2 ion-text margin>
+      Ecrivez-nous
+  </h2>
+
+<!-- Message form -->
+<form [formGroup]="onMessageForm" #form="ngForm"  method="post" class="list-form">
+    <ion-item no-padding class="animated fadeInUp">
+      <ion-label position="floating">
+          Objet
+      </ion-label>
+      <ion-input color="secondary" [(ngModel)]="object" type="text"  formControlName="object"></ion-input>
+    </ion-item>
+    <ion-item no-padding class="animated fadeInUp">
+      <ion-label position="floating">
+        Message
+      </ion-label>
+      <ion-textarea color="secondary" [(ngModel)]="message" formControlName="message"  rows="6" cols="20" placeholder="Entrez votre texte ici..."></ion-textarea>
+    </ion-item>
+  </form>
+  <ion-button size="medium" expand="block" (click)="sendMessage()" color="dark" [disabled]="!onMessageForm.valid" tappable>
+    <ion-text color="light">Envoyer</ion-text>
+  </ion-button>
+</ion-content>

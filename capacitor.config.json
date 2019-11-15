@@ -1,0 +1,7 @@
+{
+  "appId": "com.example.BeninRestoo",
+  "appName": "BeninRestoo",
+  "bundledWebRuntime": false,
+  "npmClient": "npm",
+  "webDir": "www"
+}

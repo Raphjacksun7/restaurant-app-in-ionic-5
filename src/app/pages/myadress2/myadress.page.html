@@ -1,0 +1,34 @@
+<ion-header>
+  <ion-toolbar color="dark">
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title> Adresse de livraison </ion-title>
+  </ion-toolbar>
+  <ion-toolbar class="ion-padding-start" color="bg-light" tappable (click)="addAddress()">
+      <ion-icon name="add" slot="start" ></ion-icon>
+      <ion-label>  Ajouter une nouvelle adresse</ion-label>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content color="bg-light">
+  
+  <div *ngIf="address?.length > 0">
+    <ion-col *ngFor="let adr of address" class="ion-padding-vertical">
+        <ion-item lines="none">
+          <ion-label>
+             {{ adr.adress }}
+          </ion-label>
+          <ion-icon slot="end" ios="ios-create" md="md-create"  tappable routerLink="/update-address/{{adr.id}}"></ion-icon>
+          <ion-icon slot="end" name="done-all" color="dark" (click)="setDefault(adr.id , adr.quartier , adr.ville , adr.adress)"></ion-icon>
+        </ion-item>
+      </ion-col>
+  </div>
+
+</ion-content>
+
+<ion-footer padding>
+  <ion-button size="default" expand="block" color="dark"  (click)="goValidCommand()">
+    <ion-text color="light"> Suivant </ion-text>
+  </ion-button>
+</ion-footer>

@@ -1,0 +1,93 @@
+<ion-header>
+  <ion-toolbar color="dark">
+    <ion-buttons slot="start">
+      <ion-menu-button color="light"></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+        <ion-text color="light">
+          {{ 'app.name' | translate }} <ion-text color="secondary" class="fw700"> {{ 'app.version' | translate }}</ion-text>
+        </ion-text>
+        <ion-label *ngIf="!mydata">
+          <ion-text color="light">
+            <h3>
+              Livraison à votre point actuel
+            </h3>
+          </ion-text>
+        </ion-label>
+        <ion-label *ngIf="mydata">
+          <ion-text color="light">
+            <h3>
+              Livraison à {{ userAddress }}
+            </h3>
+          </ion-text>
+        </ion-label>
+    </ion-title>
+    <ion-buttons slot="end">
+      <ion-button size="small" shape="round" (click)="openCommandes()">
+        <ion-icon name="list"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+  <ion-toolbar color="dark">
+      <ion-searchbar [(ngModel)]="searchKey" (ionInput)="onInput($event.target.value)" ></ion-searchbar>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content padding color="bg-light">
+
+  <div no-margin *ngIf="restaurants?.length === 0">
+        Oops ! Error Verifier votre connexion 
+  </div>
+
+  <div no-margin *ngIf="restaurants?.length > 0">
+
+      <ion-label>
+          <h2 color="secondary-contrast">
+            <ion-text>Tous les restaurants</ion-text>
+          </h2>
+        </ion-label>
+
+    <ion-card class="bg-white" *ngFor="let restaurant of restaurants">
+      <div class="card-image" [style.background-image]="'url(' + restaurant.img + ')'" tappable *ngIf="!restaurant.isClose" routerLink="/restaurant-detail/{{restaurant.id}}"></div>
+      <div class="card-image" [style.background-image]="'url(' + restaurant.img + ')'" tappable *ngIf="restaurant.isClose"></div>
+      <ion-card-header>
+          <ion-badge class="float" vertical="top" horizontal="end" edge>
+              <ion-icon name="star" color="light"></ion-icon>
+              <ion-text color="light"> {{ restaurant.isClose ? 'Fermer' : 'Ouvert' }} </ion-text>
+          </ion-badge>
+
+          <ion-card-subtitle>       
+            <ion-text color="warning-contrast">{{restaurant.adresse}}</ion-text>
+          </ion-card-subtitle>
+         
+          <ion-card-title margin-bottom tappable *ngIf="!restaurant.isClose" routerLink = "/restaurant-detail/{{restaurant.id}}">           
+            <ion-text color="warning-contrast">{{restaurant.nom}}</ion-text>
+          </ion-card-title>
+          <ion-card-title margin-bottom tappable *ngIf="restaurant.isClose">           
+            <ion-text color="warning-contrast">{{restaurant.nom}}</ion-text>
+          </ion-card-title>
+          <div margin-bottom tappable *ngIf="!restaurant.isClose" routerLink = "/restaurant-detail/{{restaurant.id}}">           
+            <ion-text color="warning-contrast">{{restaurant.speciality}}</ion-text>
+          </div>
+          <div margin-bottom tappable *ngIf="restaurant.isClose">           
+            <ion-text color="warning-contrast">{{restaurant.speciality}}</ion-text>
+          </div>
+      </ion-card-header>
+      <ion-card-content no-padding></ion-card-content>
+    </ion-card>
+
+    <ion-card no-padding margin class="background">
+        <ion-card-content>
+          <ion-text class="bold" color="light">
+            Vous n'avez pas retrouvé votre resto préféré ?
+          </ion-text>
+          <ion-text class="bold" color="dark" (click)="suggest()">
+            Ajoutez-le ici
+          </ion-text>
+        </ion-card-content>
+      </ion-card>
+
+  </div>
+
+</ion-content>
+
