@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NavController, LoadingController, ToastController } from '@ionic/angular';
-import { TranslateProvider, AuthService ,AddressService } from '../../providers';
+import { TranslateProvider, AuthService , AddressService } from '../../providers';
 import { NativeStorage } from '@ionic-native/native-storage/ngx';
 
 @Component({
@@ -25,35 +25,35 @@ export class MyAdressPage implements OnInit {
     ) { }
 
   ngOnInit() {
-    this.getUserAddress()
+    this.getUserAddress();
   }
 
   ionViewWillEnter() {
-   this.getUserAddress()
+   this.getUserAddress();
   }
 
   async getUserAddress() {
     this.auth.getToken().then(() => {
-      if(this.auth.isLoggedIn) {
-        this.token = this.auth.token
+      if (this.auth.isLoggedIn) {
+        this.token = this.auth.token;
 
       }
-    })
+    });
     const loading = await this.loadingCtrl.create({
       message: 'Loading...',
       spinner: 'crescent',
       duration: 50000
     });
-    await loading.present()
+    await loading.present();
     await this.service.getUserAddress(this.token)
       .subscribe(res => {
-        console.log(res)
-        this.address = res.content
-        this.address = JSON.parse(JSON.stringify(this.address))
-        loading.dismiss()
+        console.log(res);
+        this.address = res.content;
+        this.address = JSON.parse(JSON.stringify(this.address));
+        loading.dismiss();
       }, err => {
-        console.log(err)
-        loading.dismiss()
+        console.log(err);
+        loading.dismiss();
       });
 
       // const toast = await this.toastCtrl.create({
@@ -68,22 +68,22 @@ export class MyAdressPage implements OnInit {
 
 
   addAddress() {
-    this.navCtrl.navigateForward('/add-address')
+    this.navCtrl.navigateForward('/add-address');
   }
 
-  async setDefault(id ,quartier ,ville ,adress,gps_lat,gps_long) {
-    this.service.setDefaultAddress(id,this.token).subscribe(res => {
-      console.log(res)
-      this.storage.setItem('idDefault', id)
-      this.storage.setItem('quartierDefault', quartier)
-      this.storage.setItem('villeDefault', ville)
-      this.storage.setItem('adressDefault', adress)
-      this.storage.setItem('gps_lat', gps_lat)
-      this.storage.setItem('gps_long', gps_long)
-      this.getUserAddress()
+  async setDefault(id , quartier , ville , adress, gps_lat, gps_long) {
+    this.service.setDefaultAddress(id, this.token).subscribe(res => {
+      console.log(res);
+      this.storage.setItem('idDefault', id);
+      this.storage.setItem('quartierDefault', quartier);
+      this.storage.setItem('villeDefault', ville);
+      this.storage.setItem('adressDefault', adress);
+      this.storage.setItem('gps_lat', gps_lat);
+      this.storage.setItem('gps_long', gps_long);
+      this.getUserAddress();
     }, err => {
-      console.log(err)
-    })
+      console.log(err);
+    });
   }
 
 }

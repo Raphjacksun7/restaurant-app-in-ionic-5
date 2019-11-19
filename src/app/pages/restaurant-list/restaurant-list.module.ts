@@ -27,9 +27,9 @@ const routes: Routes = [
     PipesModule,
     RouterModule.forChild(routes),
     TranslateModule.forChild(),
-    AgmCoreModule.forRoot({
-      apiKey: 'AIzaSyD9BxeSvt3u--Oj-_GD-qG2nPr1uODrR0Y'
-    })
+    // AgmCoreModule.forRoot({
+    //   apiKey: 'AIzaSyD9BxeSvt3u--Oj-_GD-qG2nPr1uODrR0Y'
+    // })
   ],
   declarations: [RestaurantListPage]
 })

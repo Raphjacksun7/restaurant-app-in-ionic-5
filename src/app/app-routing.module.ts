@@ -27,7 +27,7 @@ const routes: Routes = [
   // { path: 'favorites', loadChildren: () => import('./pages/favorites/favorites.module').then(m => m.FavoritesPageModule) },
   { path: 'latest-orders', loadChildren: () => import('./pages/latest-orders/latest-orders.module').then(m => m.LatestOrdersPageModule) },
   { path: 'cart', loadChildren: () => import('./pages/modal/cart/cart.module').then(m => m.CartPageModule) },
-  { path: '**', redirectTo: 'home-location/' }
+  { path: '**', redirectTo: 'restaurant-list/' }
   
 ];
 

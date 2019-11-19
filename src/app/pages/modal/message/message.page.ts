@@ -1,7 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { MessageService } from '../../../providers';
-import { NgForm  , FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { NgForm, FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ModalController, NavController, ToastController } from '@ionic/angular';
 import messages from 'src/app/providers/message/mock-messages';
 
@@ -13,12 +13,12 @@ import messages from 'src/app/providers/message/mock-messages';
   styleUrls: ['./message.page.scss'],
 })
 export class MessagePage implements OnInit {
-
+  message;
   public onMessageForm: FormGroup
-  private object: string;
-  private messages: string; 
-  @Input() restaurants: any 
-  
+  object: string;
+  messages: string;
+  @Input() restaurants: any
+
   restaurant: any
   private email: string
 
@@ -45,23 +45,23 @@ export class MessagePage implements OnInit {
 
 
   sendMessage() {
-  for(const email of this.restaurant){
+    for (const email of this.restaurant) {
       this.email = email.email
       console.log(this.email)
-  }
-  this.messageService.sendMessage(this.object,this.messages,this.email)
-  .subscribe(async res => {
-    console.log(res)
-    const toast = await this.toastCtrl.create({
-      message: 'Votre mail à été envoyez avec succès !',
-      duration: 2000
-    })
-    toast.present()
-    this.modalCtrl.dismiss();
-  }, err => {
-    console.log(err)
-    
-  });
+    }
+    this.messageService.sendMessage(this.object, this.messages, this.email)
+      .subscribe(async res => {
+        console.log(res)
+        const toast = await this.toastCtrl.create({
+          message: 'Votre mail à été envoyez avec succès !',
+          duration: 2000
+        })
+        toast.present()
+        this.modalCtrl.dismiss();
+      }, err => {
+        console.log(err)
+
+      });
   }
 
   closeModal() {

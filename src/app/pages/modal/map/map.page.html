@@ -1,10 +1,20 @@
+<ion-header>
+  <ion-toolbar color="dark">
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Ajouter une adresse de livraison</ion-title>
+  </ion-toolbar>
+</ion-header>
 
-<ion-content color="white" padding>
-  <div class="map" #map></div> 
+<ion-content color="bg-light" padding>
+  <!-- <div class="map" #map></div> -->
+    <div id="map_canvas"></div>
+
 </ion-content>
 
 <ion-footer no-padding no-margin>
-  <ion-button no-padding no-margin icon-left size="large" expand="full"  color="dark" (click)="valid()" tappable>
+  <ion-button no-padding no-margin icon-left size="large" expand="full" color="dark" (click)="valid()" tappable>
     <ion-text color="light">Enregistrer pour quitter</ion-text>
   </ion-button>
 </ion-footer>

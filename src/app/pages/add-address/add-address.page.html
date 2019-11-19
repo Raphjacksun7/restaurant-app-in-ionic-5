@@ -1,63 +1,65 @@
 <ion-header>
-    <ion-toolbar color="dark">
-      <ion-buttons slot="start">
-        <ion-back-button></ion-back-button>
-      </ion-buttons>
-      <ion-title>Ajouter une adresse de livraison</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <ion-toolbar color="dark">
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Ajouter une adresse de livraison</ion-title>
+  </ion-toolbar>
+</ion-header>
 
 <ion-content padding color="bg-light" class="animated fadeIn">
 
   <!-- Add Address Form -->
-  <form [formGroup]="onAddAddressForm" #form="ngForm"  method="post" class="list-form">
-      <h2 ion-text margin>
-          Google Map
-      </h2>
-      <ion-button icon-left size="medium" expand="block" shape="round" (click)="goToMap()" color="dark" tappable>
-          <ion-icon slot="start" name="pin" color="light"></ion-icon>
-          <ion-text color="light">Selectioner un emplacement</ion-text>
-      </ion-button>
+  <form [formGroup]="onAddAddressForm" #form="ngForm" method="post" class="list-form">
+    <h2 ion-text margin>
+      Google Map
+    </h2>
+    <ion-button icon-left size="medium" expand="block" shape="round"
+      (click)="goToMap()" color="dark" tappable>
+      <ion-icon slot="start" name="pin" color="light"></ion-icon>
+      <ion-text color="light">Selectioner un emplacement</ion-text>
+    </ion-button>
 
-      <h2 ion-text margin>
-          Détail sur cette adresse
-      </h2>
-      <ion-item no-padding class="animated fadeInUp">
-        <ion-label position="floating">
-            Quatier
-        </ion-label>
-        <ion-input color="secondary" type="text" [(ngModel)]="distric" formControlName="distric"></ion-input>
-      </ion-item>
-      <ion-item no-padding class="animated fadeInUp">
-        <ion-label position="floating">
-            Ville
-        </ion-label>
-        <ion-input color="secondary" type="text" [(ngModel)]="city" formControlName="city"></ion-input>
-      </ion-item>
-      <ion-item no-padding class="animated fadeInUp">
-        <ion-label position="floating">
-            Adresse
-        </ion-label>
-        <ion-input color="secondary" type="text" [(ngModel)]="adresse" formControlName="address"></ion-input>
-      </ion-item>
-      <ion-item no-padding class="animated fadeInUp">
-        <ion-label position="floating">
-            Entreprise (Optionel)
-        </ion-label>
-        <ion-input color="secondary" type="text" [(ngModel)]="entreprise"formControlName="entreprise" ></ion-input>
-      </ion-item>
-      <ion-item no-padding class="animated fadeInUp">
-        <ion-label position="floating">
-            Instruction (Optionel)
-        </ion-label>
-        <ion-input color="secondary" type="text" [(ngModel)]="institue" formControlName="institue"></ion-input>
-      </ion-item>
-    </form>
+    <h2 ion-text margin>
+      Détail sur cette adresse
+    </h2>
+    <ion-item no-padding class="animated fadeInUp">
+      <ion-label position="floating">
+        Quatier
+      </ion-label>
+      <ion-input color="secondary" type="text" [(ngModel)]="distric" formControlName="distric"></ion-input>
+    </ion-item>
+    <ion-item no-padding class="animated fadeInUp">
+      <ion-label position="floating">
+        Ville
+      </ion-label>
+      <ion-input color="secondary" type="text" [(ngModel)]="city" formControlName="city"></ion-input>
+    </ion-item>
+    <ion-item no-padding class="animated fadeInUp">
+      <ion-label position="floating">
+        Adresse
+      </ion-label>
+      <ion-input color="secondary" type="text" [(ngModel)]="adresse" formControlName="address"></ion-input>
+    </ion-item>
+    <ion-item no-padding class="animated fadeInUp">
+      <ion-label position="floating">
+        Entreprise (Optionel)
+      </ion-label>
+      <ion-input color="secondary" type="text" [(ngModel)]="entreprise" formControlName="entreprise"></ion-input>
+    </ion-item>
+    <ion-item no-padding class="animated fadeInUp">
+      <ion-label position="floating">
+        Instruction (Optionel)
+      </ion-label>
+      <ion-input color="secondary" type="text" [(ngModel)]="institue" formControlName="institue"></ion-input>
+    </ion-item>
+  </form>
 
 </ion-content>
 
 <ion-footer no-padding no-margin>
-  <ion-button no-padding no-margin icon-left size="large" expand="full" (click)="SendAddress()"  color="dark" [disabled]="!onAddAddressForm.valid" tappable>
+  <ion-button no-padding no-margin icon-left size="large" expand="full" (click)="SendAddress()" color="dark"
+    [disabled]="!onAddAddressForm.valid" tappable>
     <ion-text color="light">Valider cette adresse</ion-text>
   </ion-button>
 </ion-footer>

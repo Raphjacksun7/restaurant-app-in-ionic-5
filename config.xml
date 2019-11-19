@@ -29,6 +29,8 @@
     <preference name="SplashScreenDelay" value="10000" />
     <preference name="FadeSplashScreen" value="true" />
     <preference name="AndroidPersistentFileLocation" value="Compatibility" />
+    <preference name="GOOGLE_MAPS_ANDROID_API_KEY" value="AIzaSyD9BxeSvt3u--Oj-_GD-qG2nPr1uODrR0Y" />
+    <preference name="GOOGLE_MAPS_IOS_API_KEY" value="AIzaSyD9BxeSvt3u--Oj-_GD-qG2nPr1uODrR0Y" />
     <platform name="android">
         <allow-intent href="market:*" />
         <icon density="ldpi" src="resources/android/icon/drawable-ldpi-icon.png" />
@@ -85,6 +87,9 @@
         <splash height="960" src="resources/ios/splash/Default@2x~iphone.png" width="640" />
         <splash height="480" src="resources/ios/splash/Default~iphone.png" width="320" />
         <splash height="2732" src="resources/ios/splash/Default@2x~universal~anyany.png" width="2732" />
+        <edit-config file="*-Info.plist" mode="merge" target="NSLocationWhenInUseUsageDescription">
+            <string>We use your location for full functionality of certain app features.</string>
+        </edit-config>
     </platform>
     <plugin name="cordova-sqlite-storage" spec="^3.2.1" />
     <plugin name="cordova-plugin-device" spec="^2.0.3" />

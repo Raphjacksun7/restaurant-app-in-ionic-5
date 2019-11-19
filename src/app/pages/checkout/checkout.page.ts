@@ -16,6 +16,7 @@ import { Router, NavigationExtras } from '@angular/router';
 })
 
 export class CheckoutPage {
+  cashOnDelived;
   checkoutData: any;
   paymethods = 'cashOnDelived';
   totalVal = 0;

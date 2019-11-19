@@ -20,17 +20,17 @@ import { Router } from '@angular/router';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  
-  @ViewChildren(IonRouterOutlet) routerOutlets: QueryList < IonRouterOutlet > ;
+
+  @ViewChildren(IonRouterOutlet) routerOutlets: QueryList<IonRouterOutlet>;
 
   public appPages: Array<Pages>;
-         username: string
-         userAddress: string;
-         mydata: boolean = false;
-         lastTimeBackPress = 0;
-         timePeriodToExit = 2000;
-         
-         
+  username: string;
+  userAddress: string;
+  mydata = false;
+  lastTimeBackPress = 0;
+  timePeriodToExit = 2000;
+
+
   constructor(
     private platform: Platform,
     private splashScreen: SplashScreen,
@@ -77,60 +77,60 @@ export class AppComponent {
 
   ionViewDidLoad() {
     this.authService.getToken().then(() => {
-      this.mydata = false
-      if(this.authService.isLoggedIn) {
-        this.mydata = true
-        this.username = this.authService.username
+      this.mydata = false;
+      if (this.authService.isLoggedIn) {
+        this.mydata = true;
+        this.username = this.authService.username;
       }
-    })
+    });
     this.authService.getDistric().then(() => {
-      this.mydata = false
-      if(this.authService.isLoggedIn) {
-        this.mydata = true
-        this.userAddress = this.authService.userAddress
+      this.mydata = false;
+      if (this.authService.isLoggedIn) {
+        this.mydata = true;
+        this.userAddress = this.authService.userAddress;
       }
-    })
+    });
   }
-  ionViewWillEnter(){
+  ionViewWillEnter() {
     this.authService.getToken().then(() => {
-      this.mydata = false
-      if(this.authService.isLoggedIn) {
-        this.mydata = true
-        this.username = this.authService.username
+      this.mydata = false;
+      if (this.authService.isLoggedIn) {
+        this.mydata = true;
+        this.username = this.authService.username;
       }
-    })
+    });
     this.authService.getDistric().then(() => {
-      this.mydata = false
-      if(this.authService.isLoggedIn) {
-        this.mydata = true
-        this.userAddress = this.authService.userAddress
+      this.mydata = false;
+      if (this.authService.isLoggedIn) {
+        this.mydata = true;
+        this.userAddress = this.authService.userAddress;
       }
-    })
+    });
   }
 
   async presentAlertConfirm() {
     const alert = await this.alertCtrl.create({
       // header: 'Confirm!',
-      message: "Etes vous sure de vouloir quitter l'application?",
+      message: 'Etes vous sure de vouloir quitter l\'application?',
       buttons: [{
         text: 'Annuler',
         role: 'cancel',
         cssClass: 'secondary',
-        handler: (blah) => {}
+        handler: (blah) => { }
       }, {
-        text: "Fermer l'application",
+        text: 'Fermer l\'application',
         handler: () => {
           navigator['app'].exitApp();
         }
       }]
     });
-  
+
     await alert.present();
   }
-  
+
   initializeApp() {
     this.platform.backButton.subscribeWithPriority(0, () => {
-      this.routerOutlets.forEach(async(outlet: IonRouterOutlet) => {
+      this.routerOutlets.forEach(async (outlet: IonRouterOutlet) => {
         if (this.router.url != 'restaurant-list/') {
           await this.router.navigate(['restaurant-list/']);
         } else if (this.router.url === 'restaurant-list/') {
@@ -144,7 +144,7 @@ export class AppComponent {
       });
     });
     this.platform.ready().then(() => {
-      let autoHide: boolean = true;
+      const autoHide = true;
       this.navigationBar.setUp(autoHide);
       // let status bar overlay webview
       this.statusBar.overlaysWebView(true);
@@ -152,24 +152,24 @@ export class AppComponent {
       this.statusBar.backgroundColorByHexString('#ffb900');
       setTimeout(() => {
         this.splashScreen.show();
-        // Checking internet network 
-      this.network.onDisconnect().subscribe(async () => {
-        const alert = await this.alertCtrl.create({
-          header: "La connexion a échoué",
-          message: "Il peut y avoir un problème avec votre connexion Internet. Veuillez réessayer !",
-          buttons: [
-             {
-              text: 'OKAY',
-              handler: async () => {
-                navigator['app'].exitApp()
+        // Checking internet network
+        this.network.onDisconnect().subscribe(async () => {
+          const alert = await this.alertCtrl.create({
+            header: 'La connexion a échoué',
+            message: 'Il peut y avoir un problème avec votre connexion Internet. Veuillez réessayer !',
+            buttons: [
+              {
+                text: 'OKAY',
+                handler: async () => {
+                  navigator['app'].exitApp();
+                }
               }
-            }
-          ]
-        })   
-        await alert.present() 
-      })     
-      this.network.onConnect().subscribe(() => { 
-      })
+            ]
+          });
+          await alert.present();
+        });
+        this.network.onConnect().subscribe(() => {
+        });
       }, 1000);
       // this.splashScreen.hide();
 
@@ -179,7 +179,7 @@ export class AppComponent {
       this.translateService.getTranslation(environment.language).subscribe(translations => {
         this.translate.setTranslations(translations);
       });
-      
+
     }).catch(() => {
       // Set language of the app.
       this.translateService.setDefaultLang(environment.language);
@@ -195,7 +195,7 @@ export class AppComponent {
   }
 
   logout() {
-    this.authService.logout()
-    this.navCtrl.navigateRoot('home-location')
+    this.authService.logout();
+    this.navCtrl.navigateRoot('home-location');
   }
 }

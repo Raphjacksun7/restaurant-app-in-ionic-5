@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { NgForm  , FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { NgForm, FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { NavController, MenuController, ToastController, AlertController, LoadingController } from '@ionic/angular';
 import { AlertService, AuthService, TranslateProvider } from '../../../providers';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -9,10 +10,10 @@ import { AlertService, AuthService, TranslateProvider } from '../../../providers
   styleUrls: ['./login.page.scss'],
 })
 export class LoginPage implements OnInit {
-  public onLoginForm: FormGroup
-  private userData: any
-  private email: string
-  private password: string
+  public onLoginForm: FormGroup;
+  userData: any;
+  email: string;
+  password: string;
 
   constructor(
     public navCtrl: NavController,
@@ -23,7 +24,7 @@ export class LoginPage implements OnInit {
     private authService: AuthService,
     private translate: TranslateProvider,
     private formBuilder: FormBuilder,
-    private alertService: AlertService
+    private alertService: AlertService,
   ) { }
 
   ionViewWillEnter() {
@@ -39,43 +40,44 @@ export class LoginPage implements OnInit {
       'password': [null, Validators.compose([
         Validators.required
       ])]
-    })
+    });
   }
 
   async login() {
     const loader = await this.loadingCtrl.create({
-      message: "Veuillez-vous partinentez s'l vous plait",
+      message: 'Veuillez-vous partinentez s\'l vous plait',
       spinner: 'crescent',
       duration: 4000
-    })
-    loader.present()
-    this.authService.usertoken(this.email, this.password)
-    .subscribe(data => {
-      console.log(data.content)
-          this.authService.login(data.content.token).subscribe( data => {
-            console.log(data)
-            loader.onWillDismiss().then(() => {
-              this.navCtrl.pop();
-            })
-            this.alertService.presentToast("Bienvenue "+data.username)    
-          }, err => {
-            this.alertService.presentToast("Il semblerait que vous ne vous êtes pas enregistré chez nous")
-            console.log(err)
-            return
-          })
-        console.log(data)
+    });
+    loader.present();
+    await this.authService.usertoken(this.email, this.password)
+      .subscribe(data => {
+        console.log(data.content);
+        this.authService.login(data.content.token).subscribe(data => {
+          console.log(data);
+          loader.onWillDismiss().then(() => {
+            this.navCtrl.pop();
+          });
+          this.alertService.presentToast('Bienvenue ' + data.username);
+          console.log('ok');
+        }, err => {
+          this.alertService.presentToast('Il semblerait que vous ne vous êtes pas enregistré chez nous');
+          console.log(err);
+          return;
+        });
+        console.log(data);
       },
-      error => {
-        this.alertService.presentToast("Il semblerait que vous ne vous êtes pas enregistré chez nous")
-        console.log(error)
-        return
-      })
+        error => {
+          this.alertService.presentToast('Il semblerait que vous ne vous êtes pas enregistré chez nous');
+          console.log(error);
+          return;
+        });
   }
 
 
   async forgotPass() {
     const alert = await this.alertCtrl.create({
-      header: "Mot de passe oublié ?",
+      header: 'Mot de passe oublié ?',
       message: this.translate.get('app.pages.login.text.forgot'),
       inputs: [
         {

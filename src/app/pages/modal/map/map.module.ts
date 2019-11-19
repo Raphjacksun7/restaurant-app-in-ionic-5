@@ -24,6 +24,6 @@ const routes: Routes = [
     RouterModule.forChild(routes),
     TranslateModule.forChild()
   ],
-  declarations: [MapPage]
+  declarations: []
 })
 export class MapPageModule {}

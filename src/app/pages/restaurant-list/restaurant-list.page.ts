@@ -6,7 +6,8 @@ import {
   LoadingController,
   ToastController,
   PopoverController,
-  ModalController } from '@ionic/angular';
+  ModalController
+} from '@ionic/angular';
 import { ActivatedRoute, Router } from '@angular/router';
 import {
   trigger,
@@ -18,7 +19,8 @@ import {
 } from '@angular/animations';
 
 import {
-  RestaurantService, AuthService} from '../../providers';
+  RestaurantService, AuthService
+} from '../../providers';
 import { CartPage } from './../modal/cart/cart.page';
 import { SuggestRestoPage } from './../modal/suggest-resto/suggest-resto.page';
 import { SearchFilterPage } from '../../pages/modal/search-filter/search-filter.page';
@@ -47,10 +49,10 @@ export class RestaurantListPage {
   from: String;
   agmStyles: any[] = environment.agmStyles;
   userAddress: string;
-  mydata: boolean = false;
+  mydata = false;
 
 
- 
+
   constructor(
     public navCtrl: NavController,
     public modalCtrl: ModalController,
@@ -68,29 +70,28 @@ export class RestaurantListPage {
 
   ionViewWillEnter() {
     this.authService.getDistric().then(() => {
-      this.mydata = false
-      if(this.authService.isLoggedIn) {
-        this.mydata = true
-        this.userAddress = this.authService.userAddress
+      this.mydata = false;
+      if (this.authService.isLoggedIn) {
+        this.mydata = true;
+        this.userAddress = this.authService.userAddress;
       }
-    })
+    });
     this.menuCtrl.enable(true);
     this.getRestaurants();
   }
 
-  ionViewDidLoad()
-   {
+  ionViewDidLoad() {
     this.authService.getDistric().then(() => {
-      this.mydata = false
-      if(this.authService.isLoggedIn) {
-        this.mydata = true
-        this.userAddress = this.authService.userAddress
+      this.mydata = false;
+      if (this.authService.isLoggedIn) {
+        this.mydata = true;
+        this.userAddress = this.authService.userAddress;
       }
-    })
-      this.declareRestaurant();
-   }
+    });
+    this.declareRestaurant();
+  }
 
- 
+
 
 
   async getRestaurants() {
@@ -99,39 +100,37 @@ export class RestaurantListPage {
       spinner: 'crescent',
       duration: 1500
     });
-    await loading.present()
+    await loading.present();
     await this.service.getRestaurants()
       .subscribe(res => {
-        console.log(res)
-        this.restaurants = res.content
-        this.restaurants = JSON.parse(JSON.stringify(this.restaurants))
-        loading.dismiss()
+        console.log(res);
+        this.restaurants = res.content;
+        this.restaurants = JSON.parse(JSON.stringify(this.restaurants));
+        loading.dismiss();
       }, err => {
-        console.log(err)
-        loading.dismiss()
+        console.log(err);
+        loading.dismiss();
       });
   }
 
 
-  declareRestaurant() : void
-   {
-    this.getRestaurants()
-   }
+  declareRestaurant(): void {
+    this.getRestaurants();
+  }
 
   onInput(searchTerm: any) {
-    this.declareRestaurant
-    if (searchTerm.trim() !== '')
-      {
-         this.restaurants = this.restaurants.filter((item) => {
-          return ((item.nom.toLowerCase().indexOf(searchTerm.toLowerCase()) > -1) || 
-      (item.adresse .toLowerCase().indexOf(searchTerm.toLowerCase()) > -1) || 
-      (item.speciality .toLowerCase().indexOf(searchTerm.toLowerCase()) > -1));
-        })
-      }else{
-        this.restaurants = this.ionViewDidLoad()
-      }
+    this.declareRestaurant;
+    if (searchTerm.trim() !== '') {
+      this.restaurants = this.restaurants.filter((item) => {
+        return ((item.nom.toLowerCase().indexOf(searchTerm.toLowerCase()) > -1) ||
+          (item.adresse.toLowerCase().indexOf(searchTerm.toLowerCase()) > -1) ||
+          (item.speciality.toLowerCase().indexOf(searchTerm.toLowerCase()) > -1));
+      });
+    } else {
+      this.restaurants = this.ionViewDidLoad();
+    }
   }
- 
+
 
   async openRestaurantListPage() {
     const loader = await this.loadingCtrl.create({

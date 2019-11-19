@@ -1,12 +1,15 @@
 import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { NgForm  , FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { NgForm, FormBuilder, FormGroup, Validators } from '@angular/forms';
 
-import { LoadingController, ModalController, ToastController } from '@ionic/angular';
-import { MapPage } from '../modal/map/map.page';
+import { LoadingController, ModalController, ToastController, NavController } from '@ionic/angular';
 import { HttpClient } from '@angular/common/http';
 import { map } from 'rxjs/operators';
-import { AddressService, AuthService } from '../../providers'
+import { AddressService, AuthService } from '../../providers';
+import { MatDialog } from '@angular/material/dialog';
+import { MapPage } from './map.page';
+import { Geoposition, Geolocation } from '@ionic-native/geolocation/ngx';
+import { Storage } from '@ionic/storage';
 
 
 @Component({
@@ -16,18 +19,19 @@ import { AddressService, AuthService } from '../../providers'
 })
 export class AddAddressPage implements OnInit {
 
-  public onAddAddressForm: FormGroup
+  public onAddAddressForm: FormGroup;
 
+  userStations: Geoposition;
   location: {
     latitude: number,
     longitude: number
-  }
-  
-  private distric: any
-  private city: string
-  private adresse: string
-  private entreprise: string
-  private institue: string
+  };
+
+  distric: any;
+  city: string;
+  adresse: string;
+  entreprise: string;
+  institue: string;
   token: any;
   userData: any;
 
@@ -40,10 +44,15 @@ export class AddAddressPage implements OnInit {
     private address: AddressService,
     public toastController: ToastController,
     private auth: AuthService,
-    private http: HttpClient
+    private http: HttpClient,
+    public dialog: MatDialog,
+    public navCtrl: NavController,
+    private _storage: Storage,
+    private geolocation: Geolocation,
   ) { }
 
   ngOnInit() {
+    this.getUserPositionInStorage();
     this.onAddAddressForm = this.formBuilder.group({
 
       'distric': [null, Validators.compose([
@@ -56,53 +65,71 @@ export class AddAddressPage implements OnInit {
         Validators.required
       ])],
       'entreprise': [null, Validators.compose([
-       
+
       ])],
       'institue': [null, Validators.compose([
-        
+
       ])]
-    })
-    
+    });
+
   }
+
+  async getUserPositionInStorage() {
+    await this.geolocation.getCurrentPosition().then(async (position) => {
+      this.userStations = position;
+  });
+}
 
   ionViewWillEnter() {
     this.auth.getToken().then(() => {
-      if(this.auth.isLoggedIn) {
-        this.token = this.auth.token
-        this.userData = this.auth.userData
+      if (this.auth.isLoggedIn) {
+        this.token = this.auth.token;
+        this.userData = this.auth.userData;
       }
-    })
+    });
   }
 
-  SendAddress(){
+  SendAddress() {
+    this.address.addAddress(this.distric, this.city, this.entreprise, this.userStations.coords.latitude, this.userStations.coords.longitude, this.adresse, this.institue, this.token)
+      .subscribe(async data => {
+        console.log(data.content);
+        const toast = await this.toastController.create({
+          message: 'Vous avez ajouter un nouvel adresse !',
+          duration: 2000
+        });
+        toast.present();
 
-    this.address.addAddress(this.distric,this.city,this.entreprise,this.location.latitude,this.location.longitude,this.adresse,this.institue,this.token )
-      .subscribe( async data => {
-        console.log(data.content)
-          const toast = await this.toastController.create({
-            message: 'Vous avez ajouter un nouvel adresse !',
-            duration: 2000
-          })
-          toast.present()
+      }, err => {
+        console.log(err);
+      });
+  }
 
-          }, err => {
-            console.log(err)
-          })
-      }
+  async goToMap() {
 
-   goToMap() {
-    this.modalCtrl.create({component: MapPage,componentProps: {location: this.location }})
-    .then(modal => {  
-       modal.onDidDismiss().then( modalData => {
-         if(!modalData.data) return
-         console.log(modalData.data)
-         this.location = {
-          latitude: modalData.data.lat,
-          longitude: modalData.data.lng
-        }
-      })
-        modal.present();
+    this.navCtrl.navigateRoot('add-address/add').then((a) => {
+      console.log('a:' + a);
     })
+      .catch((e) => {
+        console.log('e:' + e);
+      });
+
+    // const editOrAddDialog = this.dialog.open(MapPage, {width: '500px', height: '500px'});
+    // editOrAddDialog.afterClosed().subscribe((result) => { });
+
+
+    // await this.modalCtrl.create({ component: MapPage, componentProps: { location: this.location } })
+    //   .then(modal => {
+    //     console.log(modal);
+    //     modal.onDidDismiss().then(modalData => {
+    //       if (!modalData.data) return
+    //       console.log(modalData.data);
+    //       this.location = {
+    //         latitude: modalData.data.lat,
+    //         longitude: modalData.data.lng
+    //       };
+    //     });
+    //     modal.present();
+    //   });
   }
 
 

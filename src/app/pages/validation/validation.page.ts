@@ -17,7 +17,7 @@ import { Router } from '@angular/router';
 })
 
 export class ValidationPage implements OnInit{
-  
+  fsfs;
   commandData:any = [];
   userAddress: any;
   token: any;

@@ -2,16 +2,17 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouteReuseStrategy } from '@angular/router';
 import { HttpClientModule, HttpClient } from '@angular/common/http';
-import { HTTP } from '@ionic-native/http/ngx'
+import { HTTP } from '@ionic-native/http/ngx';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
-import { NativeStorage } from '@ionic-native/native-storage/ngx';
 import { Geolocation } from '@ionic-native/geolocation/ngx';
 import { Network } from '@ionic-native/network/ngx';
 import { NavigationBar } from '@ionic-native/navigation-bar/ngx';
+import { NativeStorage } from '@ionic-native/native-storage/ngx';
+
 
 import { AndroidPermissions } from '@ionic-native/android-permissions/ngx';
 import { LocationAccuracy } from '@ionic-native/location-accuracy/ngx';
@@ -44,6 +45,9 @@ import { environment } from '../environments/environment';
 import { PipesModule } from './pipes/pipes.module';
 import { IonicStorageModule } from '@ionic/storage';
 import { AgmCoreModule } from '@agm/core';
+// import { GoogleMaps } from '@ionic-native/google-maps/ngx';
+// import { NativeStorage } from '@ionic/storage';
+
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -52,6 +56,7 @@ export function HttpLoaderFactory(http: HttpClient) {
 @NgModule({
   declarations: [AppComponent],
   imports: [
+    // GoogleMaps,
     BrowserModule,
     BrowserAnimationsModule,
     IonicModule.forRoot(environment.config),
@@ -61,7 +66,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     DishDetailPageModule,
     CartPageModule,
     MessagePageModule,
-    MapPageModule,
+    // MapPageModule,
     SearchFilterPageModule,
     TranslateModule.forRoot({
       loader: {
@@ -70,13 +75,15 @@ export function HttpLoaderFactory(http: HttpClient) {
         deps: [HttpClient]
       }
     }),
-    IonicStorageModule.forRoot({
-      name: '__beninrestoo',
-      driverOrder: ['indexeddb', 'sqlite', 'websql']
-    }),
-    AgmCoreModule.forRoot({
-      apiKey: 'AIzaSyD9BxeSvt3u--Oj-_GD-qG2nPr1uODrR0Y'
-    }),
+    // NativeStorage,
+    IonicStorageModule.forRoot(),
+    // IonicStorageModule.forRoot({
+    //   name: '__beninrestoo',
+    //   driverOrder: ['indexeddb', 'sqlite', 'websql']
+    // }),
+    // AgmCoreModule.forRoot({
+    //   apiKey: 'AIzaSyD9BxeSvt3u--Oj-_GD-qG2nPr1uODrR0Y'
+    // }),
     PipesModule,
     ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
   ],

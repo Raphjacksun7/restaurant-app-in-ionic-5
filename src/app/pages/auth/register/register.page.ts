@@ -10,11 +10,11 @@ import { AuthService , AlertService } from '../../../providers';
 })
 export class RegisterPage implements OnInit {
   public onRegisterForm: FormGroup;
-  private firstname: string
-  private lastname: string
-  private email: string
-  private password: string
-  private tel: string
+  firstname: string
+  lastname: string
+  email: string
+  password: string
+  tel: string
   token: any;
   userData: any;
 
